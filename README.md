@@ -9,12 +9,17 @@
 sudo apt-get install rabbitmq-server
 ```
 
-2. run celery worker using below cmd:
+2. install the requirements in venv
+```
+pip install -r requirements.txt
+```
+
+3. run celery worker using below cmd:
 ```
 celery -A instance_deployment.celery worker -l INFO
 ```
 
-3. run runserver
+4. run runserver
 ```
 python3 manage.py runserver
 ```
@@ -22,8 +27,8 @@ python3 manage.py runserver
 *Endpoints*
 
 Instance creation
-http://127.0.0.1:8000/instances/api/create_instance/
-POST request: body :
+ http://127.0.0.1:8000/instances/api/create_instance/
+  POST request: body :
  ```
  {
     "instance_type": "t2.micro"
@@ -31,8 +36,8 @@ POST request: body :
 ```
 
 Get Instance State:
-http://127.0.0.1:8000/instances/api/<str:instance_id>/
-GET request: 
+ http://127.0.0.1:8000/instances/api/<str:instance_id>/
+  GET request: 
     response: 
     ```
     {
