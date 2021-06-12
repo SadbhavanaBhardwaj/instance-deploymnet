@@ -1,7 +1,7 @@
-## instance-deploymnet
+# instance-deploymnet
 
 
-# The project is to create EC2 instances and deploying nginx on the created instances using boto3
+## The project is to create EC2 instances and deploying nginx on the created instances using boto3
 
 
 1. install RabbitMQ in the system 
@@ -34,6 +34,9 @@ Instance creation
     "instance_type": "t2.micro"
 }
 ```
+
+
+_**Note: The EndPoint returns instance_id which is created synchronously and the installing docker and running nginx container is done asynchronously**_
 
 Get Instance State:
 http://127.0.0.1:8000/instances/api/get_state/<instance_id>/
