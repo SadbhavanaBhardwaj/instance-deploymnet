@@ -36,8 +36,9 @@ Instance creation
 ```
 
 Get Instance State:
- http://127.0.0.1:8000/instances/api/<str:instance_id>/
-  GET request: 
+http://127.0.0.1:8000/instances/api/get_state/<instance_id>/
+
+    GET request: 
     response: 
     ```
     {
